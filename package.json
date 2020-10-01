@@ -7,6 +7,9 @@
   },
   "main": "index.js",
   "scripts": {
+    "builder": "npm run pre-builder && npm run post-builder",
+    "pre-builder": "git add . && git commit -m 'build'",
+    "post-builder": "git push heroku main",
     "start": "node index.js",
     "test": "node test.js"
   },
